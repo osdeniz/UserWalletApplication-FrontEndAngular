@@ -2,8 +2,9 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
-  production: false
+export const environment = {//apideki sabitleri buraya koyabiliyoruz burası test modu prod.ts ise canlı mod
+  production: false,
+  api:"http://localhost:8080/api"
 };
 
 /*

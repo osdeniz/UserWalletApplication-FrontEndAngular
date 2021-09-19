@@ -3,14 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+    declarations: [
+        AppComponent,
+    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule//back-end datalarına erişmek için http client modulü impport ettik. Bunu import ettikten sonra srvice tarafında http client tarafını inject edip kullanıcaz
   ],
   providers: [],
   bootstrap: [AppComponent]
