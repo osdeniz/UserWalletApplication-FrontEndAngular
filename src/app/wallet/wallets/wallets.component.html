@@ -1,3 +1,4 @@
-<div *ngFor="let wallet of wallets">
+<div *ngFor="let wallet of wallets"(click)="openDetail(wallet.id)">
+  {{wallet.name}} - {{wallet.description}}
 
 </div>

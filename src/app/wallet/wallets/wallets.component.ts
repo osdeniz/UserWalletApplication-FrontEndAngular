@@ -32,7 +32,7 @@ export class WalletsComponent implements OnDestroy{
   }
 
   openDetail(id:number){
-    this.router.navigate(["wallets/"+id])
+    this.router.navigate(["wallets/"+id]);
 
   }
 
