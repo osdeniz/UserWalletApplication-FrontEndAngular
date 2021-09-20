@@ -11,11 +11,7 @@ import {find} from "rxjs/operators";
 })
 
 export class WalletDetailComponent{
-  title="food detail"
-
-
   walletItem:WalletModel.WalletItem | undefined;
-
   constructor(private walletService:WalletService,private activatedRoute:ActivatedRoute){
 
   }
@@ -27,8 +23,8 @@ export class WalletDetailComponent{
     //this.walletItem =  this.walletService.getWallets().(item=>item.id == walletId);
 
 
-    this.walletService.getWalletDetail(walletId).subscribe(wallet=>{
-      this.walletItem = wallet;
+    this.walletService.getWalletDetail(walletId).subscribe(wallet=>{//service katmanında yazdığımız wallet detailsi çağırdık
+      this.walletItem = wallet
     });
 
   }

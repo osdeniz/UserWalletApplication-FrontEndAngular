@@ -3,8 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:"wallets",//ilk istek buraya gelicek
-    loadChildren:()=>import("./wallet/wallet.module").then(m=>m.WalletModule)//sonra buraya gelicek alt dalları var bakıcak
+    path:'', redirectTo: '/wallets',pathMatch:'full'},
+  {
+    path:'wallets',
+    loadChildren:()=>import('./wallet/wallet.module').then(m=>m.WalletModule)//sonra buraya gelicek alt dalları var bakıcak
   },
 
 

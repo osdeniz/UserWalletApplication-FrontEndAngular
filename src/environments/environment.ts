@@ -4,7 +4,7 @@
 
 export const environment = {//apideki sabitleri buraya koyabiliyoruz burası test modu prod.ts ise canlı mod
   production: false,
-  api:"http://localhost:8080/api"
+  api:'http://localhost:8080/api'
 };
 
 /*
