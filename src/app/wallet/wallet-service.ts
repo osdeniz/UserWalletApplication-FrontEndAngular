@@ -7,6 +7,7 @@ import {CommonUtility} from "../utility/common-utility";
 
 @Injectable({
   providedIn:'root'
+
 })
 export class WalletService{
   constructor(private httpClient:HttpClient) {//http clienti inject ettik
