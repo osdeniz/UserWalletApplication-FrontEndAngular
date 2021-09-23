@@ -17,13 +17,11 @@ export class WalletService{
 
     const jsonString = localStorage.getItem('selectedUser') || '';
     const userId = CommonUtility.getInstance().getSelectedUserId(jsonString)
-    return this.httpClient.get<WalletModel.WalletItem[]>(environment.api + '/waller/alllist?userId=' + userId)
+    return this.httpClient.get<WalletModel.WalletItem[]>(environment.api + '/wallet/allList?userId=' + userId)
   }
 
   getWalletDetail(id:number):Observable<WalletModel.WalletItem>{
-    const jsonString = localStorage.getItem('selectedUser') || '';
-    const userId = CommonUtility.getInstance().getSelectedUserId(jsonString)
-    return this.httpClient.get<WalletModel.WalletItem>(environment.api + '/wallet/' + id + '?userId=' + userId)
+    return this.httpClient.get<WalletModel.WalletItem>(environment.api + '/wallet/' + id );
   }
 
   updateWallet(body:any):Observable<WalletModel.WalletItem>{
@@ -46,4 +44,9 @@ export class WalletService{
     return this.httpClient.get<WalletModel.WalletItem[]>(environment.api + '/wallet/search/' + search + '?userId=' + userId)
   }
 
+  getAllList():Observable<WalletModel.WalletItem[]>{
+    return this.httpClient.get<WalletModel.WalletItem[]>("http://localhost:8080/api/wallet/allList");
+  }
+
 }
+

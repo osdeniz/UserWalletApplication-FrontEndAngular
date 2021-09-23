@@ -5,7 +5,7 @@
       <div class="preview col-md-6">
 
         <div class="preview-pic tab-content">
-          <div class="tab-pane active" id="pic-1"><img src="data:image/jpeg;base64"/></div>
+          <div class="tab-pane active" id="pic-1"><img src="https://blog.finanswebde.com/content/images/2019/08/Cryptocurrency_logos.jpg"/></div>
 
         </div>
 
@@ -14,12 +14,16 @@
       <div class="details col-md-6">
 
         <h3 class="product-title">{{walletItem.name}}</h3>
-        <p *ngIf="walletItem.description"> ( {{walletItem.name}} {{walletItem.currenciesTypeTl}} )</p>
+        <p *ngIf="walletItem.description"> ( {{walletItem.name}} {{walletItem.currenciesTypeEth}} )</p>
         <p class="product-description">
           {{walletItem.description}}
         </p>
-        <h4 class="price">malzemeler:</h4>
-        <p class="vote">{{walletItem.description}}</p>
+        <h4 class="price">Currencies Types</h4>
+        <p>{{walletItem.currentBalance}}</p>
+        <p>{{walletItem.currenciesTypeUsd}}</p>
+        <p>{{walletItem.currenciesTypeBtc}}</p>
+        <p>{{walletItem.currenciesTypeTl}}</p>
+        <h4>Current Balance: {{walletItem.currentBalance}}</h4>
       </div>
     </div>
   </div>

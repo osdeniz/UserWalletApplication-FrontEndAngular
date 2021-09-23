@@ -24,7 +24,7 @@ export class WalletDetailComponent{
 
 
     this.walletService.getWalletDetail(walletId).subscribe(wallet=>{//service katmanında yazdığımız wallet detailsi çağırdık
-      this.walletItem = wallet
+      this.walletItem = wallet;
     });
 
   }

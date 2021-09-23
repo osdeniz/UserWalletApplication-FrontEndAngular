@@ -33,11 +33,11 @@ export class WalletsComponent implements OnDestroy{
   }
 
   openDetail(id:number){
-    this.router.navigate(['wallets/'+id]);
+    this.router.navigate(['/wallets/'+id]);
   }
 
   ngOnDestroy(): void {//walletlerde wallet detailse tıkladıktan sonra walletlerin listelendiği sayfa destroy edilir.Bu sayede sayfa daha hızlı çalışır.
-    this.subCross.unsubcribe();//bunu dediğimiz anda bu yukarıdaki subcribeyi kırıyor. Eğer bunu yapmazsak yukarıdaki subcribe sayfadan geri veya çıkış yaptığımız ahlde dinlenöeye devaö edicek."
+    this.subCross.unsubscribe();//bunu dediğimiz anda bu yukarıdaki subcribeyi kırıyor. Eğer bunu yapmazsak yukarıdaki subcribe sayfadan geri veya çıkış yaptığımız ahlde dinlenöeye devaö edicek."
   }
 
 
@@ -47,7 +47,7 @@ export class WalletsComponent implements OnDestroy{
       id:[wallet.id],
       title:[wallet.name,[Validators.required]],
       description:[wallet.description],
-      list:[wallet.description,[Validators.required]]
+      currenciesType:[wallet.currenciesTypeTl,wallet.currenciesTypeBtc,wallet.currenciesTypeUsd,wallet.currenciesTypeEth,[Validators.required]]
     })
 
   }
@@ -57,7 +57,7 @@ export class WalletsComponent implements OnDestroy{
       id:[null],
       title:['',[Validators.required]],
       description:[''],
-      list:['',[Validators.required]]
+      currenciesType:['',[Validators.required]]
     })
   }
 
@@ -96,7 +96,7 @@ export class WalletsComponent implements OnDestroy{
         id:this.form?.controls['id'].value,
         title:this.form?.controls['name'].value,
         description:this.form?.controls['detail'].value,
-        walletDetails:this.form?.controls['list'].value
+        currentBalance:this.form?.controls['currentBalance'].value
       }
 
       const jsonStringPayload = JSON.stringify(payload);

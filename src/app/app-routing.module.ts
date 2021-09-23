@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'', redirectTo: '/wallets',pathMatch:'full'},
+    path:'', redirectTo: '/wallets',pathMatch:'full'},//alttaki componenti yükler
   {
     path:'wallets',
     loadChildren:()=>import('./wallet/wallet.module').then(m=>m.WalletModule)//sonra buraya gelicek alt dalları var bakıcak

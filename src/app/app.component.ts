@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {CrossService} from "./services/cross-service";
 import {WalletService} from "./wallet/wallet-service";
 import {ActivationStart, NavigationStart, Router} from "@angular/router";
+import {WalletModel} from "./models/wallet-model";
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,8 @@ export class AppComponent {
 
   search = '';
   status = false;
+
+  wallet:WalletModel.WalletItem[]=[]
 
   constructor(private crossService:CrossService,private walletService:WalletService,private router:Router) {
 
@@ -33,6 +36,7 @@ export class AppComponent {
   }
 
   ngOnInit(){
+this.walletService.getAllList().subscribe(m=>{this.wallet = m})
 
   }
 

@@ -7,16 +7,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Your Wallets <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Account</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="#" routerLink="/users/register">Register</a>
+        <a class="nav-link" href="#" routerLink="/users/register">Transactions</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="#" routerLink="/users/register">Register</a>
+        <a class="nav-link" href="#" routerLink="/users/register">Help</a>
       </li>
       <li class="nav-item ">
         <a class="nav-link" href="#" routerLink="/users/register">Register</a>
@@ -29,8 +29,12 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchWallets()">Search</button>
     </form>
   </div>
+
 </nav>
 
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
+<router-outlet></router-outlet>
+
+<!--<div *ngFor="let wal of wallet">
+  <p>{{wal.id}}</p>
+</div> -->
+

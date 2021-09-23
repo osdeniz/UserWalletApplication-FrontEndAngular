@@ -25,5 +25,4 @@ const routes :Routes = [
   })
 export class WalletRoutingModule{
 
-
 }
